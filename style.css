@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 body, html {
-    font-family: "Anton", sans-serif;
+    font-family: "Anton";
     margin: 0;
     width: 100%;
     color: #fff;
-    background-color: #000;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
 .fullscreen-photo {
@@ -30,13 +29,14 @@ header .container {
 }
 
 .logo {
+    margin: 40px;
     width: 31px;
     height: 48px;
     z-index: 100;
 }
 
 .main-menu {
-    margin-left: 20px; /* Add space between logo and menu */
+    margin-left: 50px; 
 }
 
 .main-menu a {
@@ -53,7 +53,7 @@ header .container {
     font-weight: 400;
     font-size: 17px;
     letter-spacing: 1.4px;
-    margin-left: auto; /* Push phone number to the right */
+    margin-left: auto;
 }
 
 #menu-toggle {
@@ -97,7 +97,7 @@ header .container {
     height: 57px;
     color: #fff;
     border: 1px solid #fff;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton';
     background-color: transparent;
     font-size: 17px;
     cursor: pointer;
@@ -109,23 +109,16 @@ header .container {
     padding: 100px 0;
 }
 
-.about h1 {
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.about h2 {
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.about h1 {
-    font-size: 50px;
-}
-
+    
 .about h2 {
     font-size: 25px;
     margin-top: 50px;
+}
+
+
+
+.about h1 {
+    font-size: 50px;
 }
 
 .about p {
@@ -182,16 +175,17 @@ footer {
 }
 
 footer .container {
+    line-height: 0.5;
     display: flex;
     justify-content: space-between;
 }
 
 footer p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
     font-size: 15px;
 }
 
-/* Tablet & Mobile Styles */
+
 @media (max-width: 1023px) {
     header .container {
         align-items: flex-start;
@@ -223,7 +217,7 @@ footer p {
     }
 
     .phone-number {
-        display: none; /* Hide phone number on mobile */
+        display: none; 
     }
 
     .main-page {
@@ -278,7 +272,7 @@ footer p {
     }
 }
 
-/* Smaller Mobile Styles */
+
 @media (max-width: 480px) {
     .textoncentremain {
         font-size: 50px;
@@ -295,4 +289,44 @@ footer p {
     .main-page-content {
         margin: 0px;
     }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.textoncentretop,
+.textoncentremain,
+.btn-booktk {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.textoncentretop {
+  animation-delay: 0.2s;
+}
+
+.textoncentremain {
+  animation-delay: 0.6s;
+}
+
+.btn-booktk {
+  animation-delay: 1s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.btn-booktk:hover {
+  animation: pulse 0.8s ease-in-out;
+  background: rgba(255,255,255,0.1);
 }
